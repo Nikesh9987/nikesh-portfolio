@@ -38,7 +38,7 @@ const CONTACT_LINKS = [
     icon: MessageCircle,
     label: "WhatsApp",
     value: "+91 72579 18489",
-    href: "https://wa.me/919876543210?text=Hi%20Nikesh%2C%20I%27d%20like%20to%20discuss%20a%20project",
+    href: "https://wa.me/917257918489?text=Hi%20Nikesh%2C%20I%27d%20like%20to%20discuss%20a%20project",
     color: "#25d366",
     desc: "Quick response on WhatsApp",
   },

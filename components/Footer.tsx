@@ -45,7 +45,7 @@ const SOCIAL_LINKS = [
   },
   {
     icon: MessageCircle,
-    href: "https://wa.me/919876543210",
+    href: "https://wa.me/917257918489",
     label: "WhatsApp",
     color: "#25d366",
   },
@@ -218,7 +218,7 @@ export default function Footer() {
 
                 {/* FIX 4: Added missing opening <a> tag for WhatsApp CTA */}
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20Nikesh%2C%20I%27d%20like%20to%20discuss%20a%20project"
+                  href="https://wa.me/917257918489?text=Hi%20Nikesh%2C%20I%27d%20like%20to%20discuss%20a%20project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-cyber flex items-center justify-center gap-2 w-full py-3 border border-cyber-border text-cyber-dim font-display text-xs tracking-widest hover:border-[#25d366]/40 hover:text-[#25d366] transition-all duration-300 rounded group"
