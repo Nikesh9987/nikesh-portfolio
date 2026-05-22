@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ─────────────────────────────────────────────────────── */
+:root {
+  --cyber-cyan:   #00e5ff;
+  --cyber-accent: #64ffda;
+  --cyber-dark:   #080d1a;
+  --cyber-black:  #020409;
+}
+
+/* ── Reset & Base ──────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 229, 255, 0.25) transparent;
+  overflow-y: scroll;
+}
+
+html::-webkit-scrollbar       { width: 4px; }
+html::-webkit-scrollbar-track { background: transparent; }
+html::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.25);
+  border-radius: 2px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.5);
+}
+
+body {
+  background-color: #020409;
+  color: #c8d6e5;
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* ── Scroll Progress Bar ───────────────────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #00e5ff, #64ffda, #00e5ff);
+  background-size: 200% 100%;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+  transition: width 0.08s linear;
+  animation: progressShimmer 2s linear infinite;
+}
+
+@keyframes progressShimmer {
+  0%   { background-position: 200% 0;  }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Cursor Glow ───────────────────────────────────────────────────────── */
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 229, 255, 0.04) 0%,
+    rgba(0, 229, 255, 0.02) 30%,
+    transparent 70%
+  );
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  will-change: left, top;
+}
+
+/* ── Glass Card ────────────────────────────────────────────────────────── */
+.glass-card {
+  background: rgba(10, 22, 40, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 229, 255, 0.08);
+}
+
+/* ── Cyber Button ──────────────────────────────────────────────────────── */
+.btn-cyber {
+  position: relative;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+.btn-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+.btn-cyber:hover::before {
+  left: 100%;
+}
+
+/* ── Text Gradient ─────────────────────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, #00e5ff 0%, #64ffda 50%, #00b4d8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Typing Cursor ─────────────────────────────────────────────────────── */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #00e5ff;
+  margin-left: 1px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Selection ─────────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 229, 255, 0.18);
+  color: #fff;
+}
+
+/* ── Focus Visible (Accessibility) ────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(0, 229, 255, 0.6);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Reduced Motion ────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Keyframe Animations ───────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0);     }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes scanLine {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%);  }
+}
+
+@keyframes badgePop {
+  from { opacity: 0; transform: scale(0.8) translateY(8px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0);   }
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.92) translateY(20px); }
+  to   { opacity: 1; transform: scale(1)    translateY(0);    }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes borderGlow {
+  0%   { box-shadow: 0 0 5px  rgba(0, 229, 255, 0.2); }
+  100% { box-shadow: 0 0 20px rgba(0, 229, 255, 0.5); }
+}
+
+@keyframes loadBar {
+  0%   { width: 0%;   }
+  60%  { width: 75%;  }
+  90%  { width: 92%;  }
+  100% { width: 100%; }
+}
+
+/* ── Animation Utility Classes ─────────────────────────────────────────── */
+.animate-fade-up    { animation: fadeUp    0.8s ease forwards;              }
+.animate-fade-in    { animation: fadeIn    1s   ease forwards;              }
+.animate-float      { animation: float     6s   ease-in-out infinite;       }
+.animate-scan-line  { animation: scanLine  8s   linear    infinite;         }
+.animate-pulse-slow { animation: pulseSlow 3s   ease-in-out infinite;       }
+.animate-badge-pop  { animation: badgePop  0.4s ease both;                  }

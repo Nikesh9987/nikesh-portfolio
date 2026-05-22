@@ -1,0 +1,64 @@
+# .gitignore — Nikesh Portfolio
+
+# ── Dependencies ────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# ── Next.js ─────────────────────────────────────────────────────────────────
+.next/
+out/
+build/
+
+# ── Environment variables — NEVER commit ────────────────────────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ── Vercel ──────────────────────────────────────────────────────────────────
+.vercel
+
+# ── Netlify ─────────────────────────────────────────────────────────────────
+.netlify/
+
+# ── TypeScript ──────────────────────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Debug logs ───────────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── OS files ─────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── Editor ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+*~
+
+# ── Testing ─────────────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── Misc ────────────────────────────────────────────────────────────────────
+*.pem
+*.log
