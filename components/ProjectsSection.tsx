@@ -8,15 +8,17 @@ import ProjectCard, { type Project } from "@/components/ui/ProjectCard";
 const PROJECTS: Project[] = [
   {
     id: 0,
-    title: "AI Annotation Platform",
+    title: "Log Forensic Tool",
     description: "Enterprise-grade data labeling platform for LLM training datasets with quality pipelines.",
     longDesc:
-      "A full-featured annotation platform built for AI teams. Supports text classification, NER, sentiment labeling, and LLM response evaluation with multi-reviewer consensus scoring and audit trails.",
+      "A full-stack Windows log analysis and forensic investigation tool.
+Upload log files, search and filter entries, detect suspicious activity,
+and export results — all from a clean web interface.",
     category: "AI / ML",
     color: "#a78bfa",
     gradient: "linear-gradient(135deg, #1a0533 0%, #2d1065 50%, #0f0a2a 100%)",
     tech: ["Python", "FastAPI", "React", "PostgreSQL", "Docker"],
-    github: "https://github.com/nikeshmandal",
+    github: "https://github.com/Nikesh9987?tab=repositories",
     demo: "#",
     status: "demo",
     featured: true,
@@ -31,7 +33,7 @@ const PROJECTS: Project[] = [
     color: "#00e5ff",
     gradient: "linear-gradient(135deg, #001a2e 0%, #003655 50%, #001520 100%)",
     tech: ["Spring Boot", "React", "MySQL", "JWT", "Docker"],
-    github: "https://github.com/nikeshmandal",
+    github: "https://github.com/Nikesh9987?tab=repositories",
     demo: "#",
     status: "live",
     featured: true,
@@ -46,7 +48,7 @@ const PROJECTS: Project[] = [
     color: "#f89820",
     gradient: "linear-gradient(135deg, #1a0e00 0%, #3d2200 50%, #1a0e00 100%)",
     tech: ["Java", "Spring Boot", "React", "MongoDB", "REST API"],
-    github: "https://github.com/nikeshmandal",
+    github: "https://github.com/Nikesh9987?tab=repositories",
     demo: "#",
     status: "demo",
   },
@@ -60,7 +62,7 @@ const PROJECTS: Project[] = [
     color: "#4ade80",
     gradient: "linear-gradient(135deg, #001a0a 0%, #003318 50%, #001a0a 100%)",
     tech: ["Java", "Spring Boot", "PostgreSQL", "JWT", "Swagger", "JUnit"],
-    github: "https://github.com/nikeshmandal",
+    github: "https://github.com/Nikesh9987?tab=repositories",
     demo: "#",
     status: "live",
     featured: true,
@@ -75,7 +77,7 @@ const PROJECTS: Project[] = [
     color: "#64ffda",
     gradient: "linear-gradient(135deg, #001a15 0%, #003328 50%, #001a15 100%)",
     tech: ["React", "Node.js", "Socket.io", "MongoDB", "TypeScript"],
-    github: "https://github.com/nikeshmandal",
+    github: "https://github.com/Nikesh9987?tab=repositories",
     demo: "#",
     status: "demo",
   },
@@ -89,7 +91,7 @@ const PROJECTS: Project[] = [
     color: "#f87171",
     gradient: "linear-gradient(135deg, #1a0000 0%, #3d0000 50%, #1a0000 100%)",
     tech: ["Python", "React", "ElasticSearch", "Kibana", "FastAPI"],
-    github: "https://github.com/nikeshmandal",
+    github: "https://github.com/Nikesh9987?tab=repositories",
     demo: "#",
     status: "wip",
   },
@@ -328,7 +330,7 @@ export default function ProjectsSection() {
           <div className="flex flex-wrap justify-center gap-4">
 
             <a
-              href="https://github.com/nikeshmandal"
+              href="https://github.com/Nikesh9987?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cyber flex items-center gap-2 px-6 py-3 border border-cyber-border text-cyber-dim font-display text-xs tracking-widest hover:border-cyber-cyan/40 hover:text-cyber-cyan transition-all duration-300 rounded"

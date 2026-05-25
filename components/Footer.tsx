@@ -27,7 +27,7 @@ const SERVICES_LINKS = [
 const SOCIAL_LINKS = [
   {
     icon: Github,
-    href: "https://github.com/nikeshmandal",
+    href: "https://github.com/Nikesh9987?tab=repositories",
     label: "GitHub",
     color: "#ffffff",
   },
@@ -260,7 +260,7 @@ export default function Footer() {
               <div className="h-3 w-px bg-cyber-border hidden sm:block" />
               {/* FIX 6 (bonus): Added missing opening <a> tag for GitHub source link in bottom bar */}
               <a
-                href="https://github.com/nikeshmandal"
+                href="https://github.com/Nikesh9987?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyber-muted text-xs font-mono hover:text-cyber-cyan transition-colors"
