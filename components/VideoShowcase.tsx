@@ -706,21 +706,21 @@ export default function VideoShowcase() {
           className={`mt-8 glass-card rounded-2xl p-6 border border-cyber-border transition-all duration-700 delay-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <p className="font-display text-xs tracking-widest text-cyber-dim mb-4">
-            // FUTURE INTEGRATIONS
+            
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               {
                 name: "Cloudinary",
                 color: "#3448c5",
-                desc: "Replace blob URLs with Cloudinary signed uploads for persistent cloud video hosting with adaptive streaming and automatic thumbnail generation.",
-                steps: ["npm install cloudinary", "Set CLOUDINARY_URL env var", "Replace processFile() with Cloudinary upload API"],
+                desc: "",
+                steps: ["npm install cloudinary", "Set CLOUDINARY_URL env var"],
               },
               {
                 name: "Firebase Storage",
                 color: "#f57c00",
-                desc: "Use Firebase Storage for video uploads with Firestore for metadata — enabling multi-device sync and user authentication.",
-                steps: ["npm install firebase", "Set NEXT_PUBLIC_FIREBASE_* env vars", "Replace persist() with Firestore collection"],
+                desc: "",
+                steps: ["npm install firebase", "Set NEXT_PUBLIC_FIREBASE_* env vars"],
               },
             ].map((integration) => (
               <div
