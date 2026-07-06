@@ -1,8 +1,9 @@
 // lib/firebase.ts
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth }      from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
 
+// Note: Firestore was removed along with the video-upload feature.
+// Re-add `getFirestore` here if a future feature needs it.
 const firebaseConfig = {
   apiKey:            process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
   authDomain:        process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
@@ -12,8 +13,7 @@ const firebaseConfig = {
   appId:             process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
 };
 
-const app     = getApps().length ? getApp() : initializeApp(firebaseConfig);
-const auth    = getAuth(app);
-const db      = getFirestore(app);
+const app  = getApps().length ? getApp() : initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-export { app, auth, db };
+export { app, auth };

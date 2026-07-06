@@ -2,12 +2,11 @@
 // app/admin/layout.tsx
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { LayoutDashboard, Video, LogOut, Code2, Menu, X, Shield } from "lucide-react";
+import { LayoutDashboard, LogOut, Code2, Menu, X, Shield } from "lucide-react";
 import { adminLogout } from "@/lib/adminAuth";
 
 const NAV_ITEMS = [
-  { label: "Dashboard", href: "/admin",        icon: LayoutDashboard },
-  { label: "Videos",    href: "/admin/videos",  icon: Video           },
+  { label: "Dashboard", href: "/admin", icon: LayoutDashboard },
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {

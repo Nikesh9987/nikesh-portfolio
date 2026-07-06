@@ -1,15 +1,8 @@
 "use client";
 // app/admin/page.tsx
-import { Shield, Video, ExternalLink, ArrowRight } from "lucide-react";
+import { Shield, ExternalLink, ArrowRight } from "lucide-react";
 
 const QUICK_ACTIONS = [
-  {
-    title:       "Manage Videos",
-    description: "Upload, edit, and delete project demo videos",
-    href:        "/admin/videos",
-    icon:        Video,
-    color:       "#00e5ff",
-  },
   {
     title:       "View Portfolio",
     description: "See how your portfolio looks to visitors",

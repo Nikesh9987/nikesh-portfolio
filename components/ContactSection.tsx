@@ -89,19 +89,27 @@ export default function ContactSection() {
     return errs;
   };
 
-  // FIX 1: Changed e: React.MouseEvent → e: React.FormEvent for semantic correctness
-  // and added proper type annotation
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length) { setErrors(errs); return; }
 
     setStatus("sending");
-    // Simulate API call — replace with your EmailJS / Formspree / API route
-    await new Promise((r) => setTimeout(r, 1800));
-    setStatus("success");
-    setForm({ name: "", email: "", projectType: "", message: "" });
-    setTimeout(() => setStatus("idle"), 5000);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      setForm({ name: "", email: "", projectType: "", message: "" });
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClass = (field: keyof typeof form) =>
